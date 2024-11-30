@@ -1,0 +1,41 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "images/PasswordsToolbar_icon16.png",
+         "32": "images/PasswordsToolbar_icon32.png"
+      },
+      "default_popup": "page_popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content_script.js" ],
+      "matches": [ "*://*/*" ],
+      "run_at": "document_idle"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extDescription__",
+   "differential_fingerprint": "1.637f3e9358cc041cca3e3bcc2783ec0e3144cd9a118a756ecee328de4f7bf379",
+   "host_permissions": [ "*://*/*" ],
+   "icons": {
+      "128": "images/PasswordsExtensionIcon_128.png",
+      "16": "images/PasswordsExtensionIcon_16.png",
+      "32": "images/PasswordsExtensionIcon_32.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk4xPYZla5XqlDN0PPiLCQAYRqdaR06jSl3sntEE5jHoe7XldFqhsdBSp4L8mozwjCwi6z5YtEpTV1L2k4WYmDuiwoH7YKGlQD/YbC8QMcPvGLWOr8WYfXWtECKv0Nx7Tahk8nCIDWgJVm8YmPIDhPv4o5VVrq6aUveCKvTOskHWFyRzSTC2VKpzIVX7F65UzqqOmqLfMpo6lfaLcKSC7G6oQLA/wS7hcGZEwZ11si6XWR4o/hDuUSt6zdacy/sc7H80eH3lMnEmvb6HoB7+KvxfGIU7dqRmhA/w/X0qkiIJYeoo4tZrNxBj7TTLz9hnHUbMRwJqsoIU+pkoprgFWDQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extName__",
+   "options_ui": {
+      "open_in_tab": false,
+      "page": "settings.html"
+   },
+   "permissions": [ "privacy", "declarativeContent", "nativeMessaging", "webNavigation", "storage", "contextMenus", "scripting" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.4",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "completion_list.html" ]
+   } ]
+}
